@@ -22,6 +22,16 @@
                 }
             }
 
+            @keyframes altura{
+                0% {
+                    height: 80px;
+                }
+
+                100% {
+                    height: 120px;
+                }
+            }
+
             #anima{
                 outline: 3px solid red;
                 width: 400px;
@@ -51,6 +61,11 @@
             #anima div:nth-child(2):hover{
                 animation-play-state: paused;
             }
+
+            #anima div:nth-child(3){
+                animation: anda 2s ease-in-out 2ms infinite alternate,
+                    altura 1s linear 3 normal forwards;
+            }
         </style>
     </head>
     
@@ -58,6 +73,7 @@
         <div id="anima">
             <div>1</div>
             <div>2</div>
+            <div>3</div>
         </div>
     </body>
 </html>
