@@ -32,6 +32,16 @@
                 }
             }
 
+            @keyframes largura {
+                0% {
+                    width: 100px;
+                }
+
+                100% {
+                    width: 400px;
+                }
+            }
+
             #anima{
                 outline: 3px solid red;
                 width: 400px;
@@ -63,10 +73,30 @@
             }
 
             #anima div:nth-child(3){
-                animation: anda 2s ease-in-out 2ms infinite alternate,
-                    altura 1s linear 3 normal forwards;
+                /* animation: anda 2s ease-in-out 2ms infinite alternate,
+                    altura 1s linear 3 normal forwards; */
 
                     will-change: height;
+            }
+
+            #anima div:nth-child(4){
+                animation: largura 5s infinite;
+                animation-timing-function: steps(5, jump-start);
+            }
+
+            #anima div:nth-child(5){
+                animation: largura 5s infinite;
+                animation-timing-function: steps(5, jump-end);
+            }
+
+            #anima div:nth-child(6){
+                animation: largura 5s infinite;
+                animation-timing-function: steps(5, jump-none);
+            }
+
+            #anima div:nth-child(7){
+                animation: largura 5s infinite;
+                animation-timing-function: steps(5, jump-both);
             }
         </style>
     </head>
@@ -76,6 +106,10 @@
             <div>1</div>
             <div>2</div>
             <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
         </div>
     </body>
 </html>
