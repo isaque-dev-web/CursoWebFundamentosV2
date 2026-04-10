@@ -1,74 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilo/style.css">
 
-        <title>Projeto ModaOra</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Projeto ModaOra</title>
+</head>
 
-    <body>
-        <header>
-            <h1>Moda Ora</h1>
+<body>
 
-            <nav class="underline">
-                <ul>
-                    <li>Portifólio</li>
-                    <li>Sobre nós</li>
-                    <li>Contato</li>
-                </ul>
-            </nav>
+    <!-- CORREÇÃO: removido .container filho duplicado -->
+    <header>
+        <h1>Moda Ora</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Portfólio</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            
-        </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <!-- ADIÇÃO: eyebrow label para hierarquia visual -->
+                <span class="hero-eyebrow">Coleção 2025</span>
+                <h2>Elegância que define seu estilo</h2>
+                <p>Descubra peças exclusivas para momentos especiais</p>
+                <button>Ver coleção</button>
+            </div>
+        </section>
 
-        <main>
-            <section class="img-topo">
-                <!-- <img class="img-topo" src="img/topo.jpg" alt="Imagem de uma mulher"> -->
-            </section>
+        <section class="primeiro-artigo">
+            <article>
+                <!-- ADIÇÃO: eyebrow de seção -->
+                <span class="section-eyebrow">Nossa filosofia</span>
+                <h2>A escolha certa para momentos especiais</h2>
+                <p>Com uma equipe de designers talentosos e experientes, criamos roupas que combinam qualidade, estilo e
+                    conforto. Utilizamos materiais de alta qualidade e técnicas de fabricação de ponta para garantir que
+                    cada peça seja durável e bonita.</p>
+            </article>
+        </section>
 
-            <section class="primeiro-artigo">
-                <article>
-                    <h2>A escolha curta para momentos especiais</h2>
-
-                    <p>Com uma equipe de designers talentosos e experientes, criamos roupas que combinam qualidade, estilo e conforto. Utilizamos materiais de alta qualidade e técnicas de fabricação de ponta para garantir que cada peça seja durável e bonita. Desde vestidos até blusas, calças e saias, nossas coleções são criadas para pessoas modernas que desejam se sentir confiantes e sofisticadas. Nós nos esforçamos para oferecer a melhor experiência de compra possível, garantindo a satisfação dos nossos clientes em cada etapa do processo.</p>
-                </article>
-            </section>
-
-            <section class="sec-mod">
+        <section class="sec-mod">
+            <!-- ADIÇÃO: divider categorizador -->
+            <div class="section-divider">
+                <span>Destaque da coleção</span>
+            </div>
+            <div class="grid-modelos">
                 <div class="imagens-modelos">
                     <img src="img/modelo5.jpg" alt="Imagem de um homem">
                     <h3>Vest Romasa</h3>
                     <p>Forte &amp; carismático</p>
-
+                    <span class="card-tag">Masculino</span>
                 </div>
-
                 <div class="imagens-modelos">
                     <img src="img/modelo4.jpg" alt="Imagem de uma mulher">
                     <h3>Jacket Black Kira</h3>
                     <p>Empoderamento atraente</p>
+                    <span class="card-tag">Feminino</span>
                 </div>
-
                 <div class="imagens-modelos">
                     <img src="img/modelo3.jpg" alt="Imagem de uma mulher">
                     <h3>Jacket Fima</h3>
                     <p>Personalidade marcante</p>
-
+                    <span class="card-tag">Feminino</span>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="img-fundo">
-                <article>
-                    <h1>Quando os detalhes importam simplesmente moda</h1>
+        <section class="img-fundo">
+            <article>
+                <!-- CORREÇÃO: H1 → H2 (semântica correta) -->
+                <h2>Quando os detalhes importam — simplesmente moda</h2>
+                <p>Sabemos que, para muitas pessoas, a moda é mais do que simplesmente vestir roupas. É uma forma de
+                    expressão e uma maneira de mostrar ao mundo quem você é.</p>
+            </article>
+        </section>
 
-                    <p>Sabemos que, para muitas pessoas, a moda é mais do que simplesmente vestir roupas. É uma forma de expressão e uma maneira de mostrar ao mundo quem você é. É por isso que nos esforçamos para oferecer peças que atendam aos mais altos padrões de qualidade e estilo. Desde a escolha dos materiais até a criação de cada detalhe, nossa equipe se dedica a produzir roupas que se destacam pela sua elegância e sofisticação. Aqui, você encontrará peças que unem o melhor da moda com a atenção aos detalhes que faz toda a diferença. Descubra uma nova forma de se expressar através da moda conosco.</p>
-                </article>
-            </section>
-        </main>
+        <!-- ADIÇÃO: seção de CTA antes do footer -->
+        <section class="newsletter">
+            <p>Receba novidades e lançamentos exclusivos</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="seu@email.com" aria-label="E-mail">
+                <button type="button">Inscrever</button>
+            </div>
+        </section>
+    </main>
 
-        <footer>
-            <p>Copyright &copy; modaora.com</p>
-        </footer>
-    </body>
+    <!-- MELHORIA: footer com três colunas -->
+    <footer>
+        <span class="footer-logo">Moda Ora</span>
+        <nav class="footer-nav">
+            <a href="#">Portfólio</a>
+            <a href="#">Sobre nós</a>
+            <a href="#">Contato</a>
+        </nav>
+        <p>© modaora.com</p>
+    </footer>
+
+</body>
+
 </html>
