@@ -23,10 +23,12 @@
             height: 100%;
             transform-style: preserve-3d;
             transition: transform .6s ease;
+            position: relative;
+            transform-origin: right center;
         }
 
         .cena:hover .card{
-            transform: rotateY(180deg);
+            transform: translateX(-300px) rotateY(-180deg);
         }
 
         .card_face{
@@ -36,6 +38,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            backface-visibility: hidden;
         }
 
         .frente{
@@ -46,7 +49,6 @@
             background-color: blue;
             color: white;
             transform: rotateY(180deg);
-            backface-visibility: hidden;
         }
     </style>
 </head>
