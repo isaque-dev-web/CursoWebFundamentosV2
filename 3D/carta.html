@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        .cena{
+            border: 2px solid #ccc;
+            width: 300px;
+            height: 400px;
+            margin: 60px;
+            perspective: 600px;
+        }
+        
+        .card{
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform .6s ease;
+        }
+
+        .cena:hover .card{
+            transform: rotateY(180deg);
+        }
+
+        .card_face{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente{
+            background-color: red;
+        }
+
+        .verso{
+            background-color: blue;
+            color: white;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="cena">
+        <div class="card">
+            <div class="card_face frente">Frente</div>
+            <div class="card_face verso">Verso</div>
+        </div>
+    </div>
+</body>
+</html>
