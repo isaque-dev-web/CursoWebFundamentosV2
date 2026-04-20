@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D perspective</title>
+
+        <style>
+            body {
+                font-family: sans-serif;
+                margin-bottom: 100vh;
+            }
+
+            .cena {
+                border: 1px solid #ccc;
+                width: 300px;
+                aspect-ratio: 1;
+                margin: 80px;
+            }
+
+            .plano {
+                background-color: red;
+            }
+
+            #cena1 {
+                perspective: 400px;
+            }
+
+            #cena1 .plano {
+                width: 200px;
+                margin: 50px;
+                aspect-ratio: 1;
+                transform: rotateX(35deg);
+            }
+
+            #cena2 .plano {
+                width: 200px;
+                margin: 50px;
+                aspect-ratio: 1;
+                transform: perspective(600px) rotateX(35deg); /* Função */
+
+            }
+
+            #cena3, 
+            #cena4{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+
+            #cena3 .plano,
+            #cena4 .plano {
+                margin: 1rem;
+            }
+
+            #cena3 {
+                perspective: 600px;
+                perspective-origin: right top;
+            }
+
+            #cena3 .plano {
+                transform: rotateY(45deg);
+            }
+
+            #cena4 .plano {
+                transform: perspective(600px) rotateX(55deg) rotateY(15deg) rotate3d(65deg);
+            }
+
+            .container {
+                perspective: 800px;
+            }
+
+            .carta {
+                transform-style: preserve-3d;
+                transition: transform .6s ease;
+                position: relative;
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+
+            .container:hover .carta {
+                transform: rotateY(180deg);
+            }
+
+            .frente, .verso {
+                position: absolute;
+                backface-visibility: hidden;
+            }
+
+            .verso {
+                transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="cena" id="cena1">
+            <div class="plano">Plano</div>
+        </div>
+
+        <div class="cena" id="cena2">
+            <div class="plano">Plano</div>
+        </div>
+
+        <div class="cena" id="cena3">
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+        </div>
+
+        <div class="cena" id="cena4">
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+            <div class="plano">Plano</div>
+        </div>
+
+        <div class="container">
+            <div class="carta">
+                <div class="frente">😀</div>
+                <div class="verso">🎉</div>
+            </div>
+        </div>
+    </body>
+</html>
