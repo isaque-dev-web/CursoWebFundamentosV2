@@ -55,11 +55,12 @@
 
             #cena3 {
                 perspective: 600px;
-                perspective-origin: right top;
+                perspective-origin: right top; /* De onde vem o "olhar" — padrão é o centro */
             }
 
             #cena3 .plano {
-                transform: rotateY(45deg);
+                transform: rotateY(100deg);
+                backface-visibility: hidden;
             }
 
             #cena4 .plano {
@@ -71,7 +72,7 @@
             }
 
             .carta {
-                transform-style: preserve-3d;
+                transform-style: preserve-3d; /* Faz os filhos participarem do espaço 3D */
                 transition: transform .6s ease;
                 position: relative;
                 width: 200px;
@@ -85,7 +86,7 @@
 
             .frente, .verso {
                 position: absolute;
-                backface-visibility: hidden;
+                backface-visibility: hidden; /* Esconde a face traseira do elemento quando ele está "de costas" */
             }
 
             .verso {
