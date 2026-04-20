@@ -24,24 +24,25 @@
         }
 
         .cena1a {
-            transform: rotateY(45deg);
+            transform: rotateY(85deg) translateX(200px);
             transform-style: preserve-3d;
         }
 
         .cena1b {
-            transform: rotateX(605deg) rotateY(320deg);
+            /* transform: rotateX(605deg) rotateY(320deg); */
+            transform:  rotateX(-95deg) translateZ(-100px) scale3d(1, 2, 1);
         }
 
-        .cena1c {
+        /* .cena1c {
             transform: rotateY(300deg);
-        }
+        } */
     </style>
 </head>
 <body>
     <div id="cena1" class="cena">
         <div class="cena1a plano">
             <div class="cena1b plano">cena 1 B</div>
-            <div class="cena1c plano">cena 1 B</div>
+            <!-- <div class="cena1c plano">cena 1 B</div> -->
         </div>
     </div>
 </body>
