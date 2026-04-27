@@ -6,135 +6,114 @@
         <title>Jogo da Memória</title>
 
         <style>
-            body, html{
-                height: 100%;
-                margin: 0;
-                background-image: linear-gradient(80deg, #6200ff, #9400c1);
-            }
-
-            .container{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                perspective: 600px;
-            }
-
-            .grid{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 20px;
-                width: 400px;
-                height: 400px;
-                background-color: white;
-                padding: 20px;
-                text-align: center;
-            }
-            
-            .card{
-                width: 100%;
-                height: 100%;
-                transform-style: preserve-3d;
-                transition: transform .6s ease;
-                position: relative;
-                transform-origin: right center;
-            }
-            
-            .grid:hover .card{
-                transform: translateY(-300px) rotateY(-180deg);
-            }
-            
-            .card_face{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                backface-visibility: hidden;
-                border-radius: 10px;
-            }
-
-            .frente{
-                background-color: red;
-            }
-
-            .verso{
-                background-color: blue;
-                color: white;
-                transform: rotateY(180deg);
-            }
+           
         </style>
     </head>
 
     <body>
-        <div class="container">
-            <div class="grid">
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-                <div class="card">
-                    <div class="card_face frente">Frente</div>
-                    <div class="card_face verso">Verso</div>
-                </div>
-            </div>
+       <main>
+        <h1>Jogo da memória</h1>
+
+        <div class="controls">
+            <input type="checkbox" name="" id="check1">
+            <input type="checkbox" name="" id="check2">
+            <input type="checkbox" name="" id="check3">
+            <input type="checkbox" name="" id="check4">
+            <input type="checkbox" name="" id="check5">
+            <input type="checkbox" name="" id="check6">
+            <input type="checkbox" name="" id="check7">
+            <input type="checkbox" name="" id="check8">
+            <input type="checkbox" name="" id="check9">
+            <input type="checkbox" name="" id="check10">
+            <input type="checkbox" name="" id="check11">
+            <input type="checkbox" name="" id="check12">
+            <input type="checkbox" name="" id="check13">
+            <input type="checkbox" name="" id="check14">
+            <input type="checkbox" name="" id="check15">
+            <input type="checkbox" name="" id="check16">
         </div>
+
+        <div class="game">
+            <label for="check1" class="card card1">
+                <img src="img/07.jpg" class="card-front" alt="Card 06">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check2" class="card card2">
+                <img src="img/01.png" class="card-front" alt="Card 01">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check3" class="card card3">
+                <img src="img/02.jpg" class="card-front" alt="Card 02">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check4" class="card card4">
+                <img src="img/03.jpg" class="card-front" alt="Card 03">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check5" class="card card5">
+                <img src="img/04.png" class="card-front" alt="Card 04">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check6" class="card card6">
+                <img src="img/06.jpg" class="card-front" alt="Card 06">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check7" class="card card7">
+                <img src="img/07.jpg" class="card-front" alt="Card 07">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check8" class="card card8">
+                <img src="img/08.jpg" class="card-front" alt="Card 08">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check9" class="card card9">
+                <img src="img/01.png" class="card-front" alt="Card 09">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check10" class="card card10">
+                <img src="img/02.jpg" class="card-front" alt="Card 10">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check11" class="card card11">
+                <img src="img/03.jpg" class="card-front" alt="Card 11">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check12" class="card card12">
+                <img src="img/04.png" class="card-front" alt="Card 12">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check13" class="card card13">
+                <img src="img/05.png" class="card-front" alt="Card 13">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check14" class="card card14">
+                <img src="img/06.jpg" class="card-front" alt="Card 14">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check15" class="card card15">
+                <img src="img/07.jpg" class="card-front" alt="Card 15">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+
+            <label for="check16" class="card card16">
+                <img src="img/08.jpg" class="card-front" alt="Card 16">
+                <img src="img/back.png" class="card-back" alt="card memory">
+            </label>
+        </div>
+       </main>
     </body>
 </html>

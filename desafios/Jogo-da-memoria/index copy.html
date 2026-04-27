@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jogo da Memória</title>
+
+        <style>
+            body, html{
+                height: 100%;
+                margin: 0;
+                background-image: linear-gradient(80deg, #6200ff, #9400c1);
+            }
+
+            .container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                perspective: 600px;
+            }
+
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                width: 400px;
+                height: 400px;
+                background-color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .card{
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: transform .6s ease;
+                position: relative;
+                transform-origin: right center;
+            }
+            
+            .grid:hover .card{
+                transform: translateY(-300px) rotateY(-180deg);
+            }
+            
+            .card_face{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                backface-visibility: hidden;
+                border-radius: 10px;
+            }
+
+            .frente{
+                background-color: red;
+            }
+
+            .verso{
+                background-color: blue;
+                color: white;
+                transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+                <div class="card">
+                    <div class="card_face frente">Frente</div>
+                    <div class="card_face verso">Verso</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
