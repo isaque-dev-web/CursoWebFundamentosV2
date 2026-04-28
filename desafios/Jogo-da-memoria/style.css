@@ -44,8 +44,7 @@ main{
 }
 
 .controls:focus{
-    outline: inset 2px solid blue;
-    box-shadow: 0 5px 8px -5px blue;
+    
 }
 
 .card img{
@@ -81,4 +80,33 @@ main:has(#check14:checked) .game .card14,
 main:has(#check15:checked) .game .card15,
 main:has(#check16:checked) .game .card16{
     transform: rotateY(180deg);
+}
+
+main:has(#check1:focus) .game .card1,
+main:has(#check2:focus) .game .card2,
+main:has(#check3:focus) .game .card3,
+main:has(#check4:focus) .game .card4,
+main:has(#check5:focus) .game .card5,
+main:has(#check6:focus) .game .card6,
+main:has(#check7:focus) .game .card7,
+main:has(#check8:focus) .game .card8,
+main:has(#check9:focus) .game .card9,
+main:has(#check10:focus) .game .card10,
+main:has(#check11:focus) .game .card11,
+main:has(#check12:focus) .game .card12,
+main:has(#check13:focus) .game .card13,
+main:has(#check14:focus) .game .card14,
+main:has(#check15:focus) .game .card15,
+main:has(#check16:focus) .game .card16{
+    outline: 2px solid red;
+    outline-offset: 2px;
+}
+
+.controls{
+    /* display: none; A ACESSIBILIDADE PARA DE FUNCIONAR */ 
+    position: absolute;
+    clip-path: inset(1px 1px 1px 1px);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
