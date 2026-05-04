@@ -38,37 +38,66 @@
                 justify-content: center;
             }
 
-            /* .cubo {
-                transform: rotateY(15deg) rotateX(15deg);
-            } */
+            .cubo {
+                transform: translateZ(-150px) rotateY(45deg) rotateX(15deg) rotateZ(90deg);
+            }
 
             .face-1{
-                transform: rotateY(0deg);
+                transform: translateZ(150px) rotateY(0deg);
             }
 
             .face-2{
-                transform: rotateY(90deg) translateX(150px)  translateZ(150px);
+                transform: translateX(150px) rotateY(90deg);
             }
 
             .face-3{
-                transform: translateX(-150px) translateZ(-150px) rotateY(90deg);
+                transform: translateX(-150px) rotateY(90deg);
             }
 
             .face-4{
-                transform: translateZ(-300px);
+                transform: translateZ(-150px);
             }
 
             .face-5{
-                transform: translateY(-150px) translateZ(-150px) rotateX(90deg);
+                transform: translateY(-150px) rotateX(90deg);
             }
 
             .face-6{
-                transform: translateY(150px) translateZ(-150px) rotateX(-90deg);
+                transform: translateY(150px) rotateX(-90deg);
             }
         </style>
     </head>
 
     <body>
+        <div class="controls">
+            <div class="x-axis"> Eixo X
+                <label><input type="radio" name="x">15&deg</label>
+                <label><input type="radio" name="x">45&deg</label>
+                <label><input type="radio" name="x">90&deg</label>
+                <label><input type="radio" name="x">135&deg</label>
+                <label><input type="radio" name="x">180&deg</label>
+                <label><input type="radio" name="x">270&deg</label>
+            </div>
+
+            <div class="y-axis"> Eixo Y
+                <label><input type="radio" name="y">15&deg</label>
+                <label><input type="radio" name="y">45&deg</label>
+                <label><input type="radio" name="y">90&deg</label>
+                <label><input type="radio" name="y">135&deg</label>
+                <label><input type="radio" name="y">180&deg</label>
+                <label><input type="radio" name="y">270&deg</label>
+            </div>
+
+            <div class="y-axis"> Eixo Z
+                <label><input type="radio" name="z">15&deg</label>
+                <label><input type="radio" name="z">45&deg</label>
+                <label><input type="radio" name="z">90&deg</label>
+                <label><input type="radio" name="z">135&deg</label>
+                <label><input type="radio" name="z">180&deg</label>
+                <label><input type="radio" name="z">270&deg</label>
+            </div>
+        </div>
+
         <div class="cena">
             <div class="cubo">
                 <div class="face face-1">1</div>
