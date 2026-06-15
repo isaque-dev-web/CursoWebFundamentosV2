@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Loops - tabuada</h1>
+
+        <script>
+            let n = parseFloat(prompt("Digite um número:"))
+            
+            if(!isNaN(n)){
+                
+                for(let i = 0; i <= 100; i++){
+                    document.write(n + " x "+i+": " + n * i + "<br>")
+                }
+            } else {
+                alert("Digite um número")
+            }
+        </script>
+    </body>
+</html>
