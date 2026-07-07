@@ -12,9 +12,15 @@
         <script>
             let nomes = ["João", "Maria", "isaque", "Beatriz", "Maitê"] // sintaxe literal
 
+            let nomeDigitado = prompt("Digite seu nome: ")
+
+            nomes[nomes.length] = nomeDigitado
+
             for(let i = 0; i < nomes.length; i++){
                 document.write("nome: " + nomes[i] + "<br>")
             }
+
+            document.write("A lista possui " + nomes.length + " elementos")
         </script>
     </body>
 </html>
