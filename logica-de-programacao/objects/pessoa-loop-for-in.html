@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objetos</title>
+    </head>
+
+    <body>
+        <h1>Objetos</h1>
+
+        <script>
+            const endereco = {
+                logradouro: "Rua das Tabuas",
+                numero: 200
+            }
+
+            const pessoa = {
+                nome: "Luana",
+                sobrenome: "Fagundes",
+                endereco // Não precisa colocar valor, por que tanto a propriedade quanto valor forem iguais, pode omitir, porque o js vai entender que são iguais
+            }
+
+            document.write(`${pessoa.nome} mora na ${pessoa.endereco.logradouro}, número ${pessoa.endereco.numero}`)
+
+            // loop for .. in serve para interagir com um objeto
+            for (let prop in pessoa) {
+                // document.write(`${prop}`)
+                // document.write(`${pessoa[prop]} `)
+
+                console.log(prop)
+                console.log(pessoa[prop])
+            }
+        </script>
+    </body>
+</html>
