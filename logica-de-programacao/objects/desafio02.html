@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objetos</title>
+    </head>
+
+    <body>
+        <h1>Objetos</h1>
+
+        <script>
+            const endereco = {
+                logradouro: "Rua das Tabuas",
+                numero: 302
+            }
+
+            const pessoa = {
+                nome: "Felipe",
+                sobrenome: "Fagundes",
+                endereco // Não precisa colocar valor, por que tanto a propriedade quanto valor forem iguais, pode omitir, porque o js vai entender que são iguais
+            }
+
+            document.write(`${pessoa.nome} ${pessoa.sobrenome} mora na ${pessoa.endereco.logradouro}, número ${pessoa.endereco.numero}`)
+        </script>
+    </body>
+</html>
