@@ -13,5 +13,25 @@
         <hr>
 
         <input type="text" id="user" value="valor preenchido">
+
+        <hr>
+
+        <h2>Lista de tarefas</h2>
+
+        <ol id="listaTarefas">
+            <li>Aprender CSS</li>
+            <li>Aprender CSS</li>
+            <li>Aprender CSS</li>
+            <li>Aprender CSS</li>
+        </ol>
+
+        <script>
+            document.getElementById("titulo").textContent = "titulo alterado 2"
+
+            const lista = document.getElementById("listaTarefas")
+            let novaTarefa = "Aplicar à vagas de emprego"
+
+            lista.innerHTML += "<li>teste 2</li>"
+        </script>
     </body>
 </html>
