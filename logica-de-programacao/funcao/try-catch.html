@@ -1,28 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Try Catch</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try Catch</title>
+  </head>
 
-    <body>
-        <h1>try ... catch(error)</h1>
-        <div id="output"></div>
+  <body>
+    <h1>try ... catch(error)</h1>
+    <div id="output"></div>
 
-        <script>
-            let obj = {nome: "Daniel", email: "daniel56@gmail.com"}
+    <script>
+      let obj = { nome: "Daniel", email: "daniel56@gmail.com" };
 
-            try{
-                document.getElementById("output").innerHTML = `Nome: ${obj.nome} - Email: ${obj.email}`
+      try {
+        document.getElementById("output").innerHTML =
+          `Nome: ${obj.nome} - Email: ${obj.email}`;
+      } catch (e) {
+        alert("algo está errado!" + e.message);
+      } finally {
+        alert("Está tudo certo!");
+      }
 
-            } catch (e){
-                alert("algo está errado!" + e.message)
-            } finally {
-                alert("Está tudo certo!")
-            }
+      // alert("fim do programa")
+    </script>
 
-            alert("fim do programa")
-        </script>
-    </body>
+    <script src="areas.js"></script>
+
+    <script>
+		try{
+			console.log(calcularAreaRetangulo(2, "assas"));
+
+		} catch(e){
+			alert("deu ruim: " + e.message)
+		}
+
+		try {
+			let areaTriangulo = calcularAreaTriangulo(3, 5)
+			document.getElementById("output").innerHTML = `a area do triângulo é ${areaTriangulo}`
+		} catch (e) {
+			console.log(e)
+		}
+
+		try{
+			let areaCirculo = calcularAreaCirculo(10)
+			console.log(`a area do circulo de raio 10 é: ${areaCirculo}`)
+		} catch(e){
+			console.log(e.message)
+		}
+		alert("fim do programa");
+    </script>
+  </body>
 </html>
