@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tipos primitivos</title>
+    </head>
+
+    <body>
+        <p>Em javascript, há dois tipos de dados possíveis: primitivos (passados por valores) e objetos (passados por referência)</p>
+
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Boolean</li>
+            <li>null</li>
+            <li>undefined</li>
+            <li>Symbol (ES2015)</li>
+        </ul>
+
+        <script>
+            let n = 20
+
+            function teste(n) {
+                console.log("n interno funcao teste", ++n)
+            }
+
+            teste(n) // valor 20
+
+            console.log("n externo", n)
+
+            const arr = [1, 2, 3]
+
+            function adicionarNaArray(valor, arr) {
+                arr[arr.lenght] = valor
+            }
+
+            function limparArray(arr) {
+                arr.lenght
+            }
+
+            // adicionarNaArray("novo valor", [1,2,3]) X
+            // adicionarNaArray("novo valor", ax123)
+
+            console.log(arr)
+
+            limparArray(arr)
+            adicionarNaArray("novo valor", arr)
+
+            console.log(arr)
+
+            const obj = {nome: "Daniel"}
+
+            function adicionarPropEmObjeto(prop, valor, obj) {
+                if (obj[prop] === undefined) {
+                    obj[prop] = valor
+                }
+            }
+
+            adicionarPropEmObjeto("sobrenome", "Maria", obj)
+
+            console.log(obj)
+        </script>
+    </body>
+</html>
