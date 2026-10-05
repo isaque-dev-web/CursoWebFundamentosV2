@@ -7,12 +7,23 @@
 
 // init()
 
-(function(){
-    let isValid = true
+// (function(){
+//     let isValid = true
+//     console.log("menu", isValid)
+
+//     function init(){
+//         console.log("init do menu")
+//     }
+//     init()
+// })()
+
+(function(win, doc){
+    let isValid = false
+    win.alert("Olá, mundo!")
     console.log("menu", isValid)
 
     function init(){
         console.log("init do menu")
     }
     init()
-})()
+})(window, document)
