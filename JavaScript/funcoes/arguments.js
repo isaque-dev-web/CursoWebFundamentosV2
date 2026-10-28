@@ -7,7 +7,17 @@
 //     return total
 // }
 
-const somar = function (){
+// const somar = function (){
+//     console.log(arguments)
+//     let total = 0;
+//     for(let i = 0; i < arguments.length; i++){
+//         total += arguments[i]
+//     }
+//     return total
+// }
+
+
+function somar() {
     console.log(arguments)
     let total = 0;
     for(let i = 0; i < arguments.length; i++){
@@ -16,4 +26,4 @@ const somar = function (){
     return total
 }
 
-console.log(somar(1, 2, 3))
+console.log(somar.name) // retorna o nome da função
