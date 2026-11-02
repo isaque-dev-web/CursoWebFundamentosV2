@@ -5,8 +5,8 @@ function calcularMedia(){
     }
 
     // console.log(arguments) // imprime os valores passados como argumentos
-    let total = 0;
-    for(let i = 0; i < arguments.length; i++){
+    let total = 0; // variável para armazenar a soma dos valores passados como argumentos
+    for(let i = 0; i < arguments.length; i++){ // percorre todos os valores passados como argumentos
         if(typeof arguments[i] !== 'number'){ // verifica se o valor passado como argumento é um número
             throw new Error("Todos os valores têm que ser números") // lança um erro caso algum valor não seja um número
         }
