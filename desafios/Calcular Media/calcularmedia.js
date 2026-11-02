@@ -10,9 +10,9 @@ function calcularMedia(){
         if(typeof arguments[i] !== 'number'){ // verifica se o valor passado como argumento é um número
             throw new Error("Todos os valores têm que ser números") // lança um erro caso algum valor não seja um número
         }
-        total += arguments[i]
+        total += arguments[i] // soma todos os valores passados como argumentos
     }
-    return total / arguments.length;
+    return total / arguments.length; // retorna a média dos valores passados como argumentos
 }
 console.log(calcularMedia()) // retorna 0 caso não haja valores para calcular a média
 
