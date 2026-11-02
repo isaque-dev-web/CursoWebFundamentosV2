@@ -1,4 +1,4 @@
-
+// Função para calcular a média de valores passados como argumentos
 function calcularMedia(){
     if(arguments.length === 0){
         return 0; // retorna 0 caso não haja valores para calcular a média
